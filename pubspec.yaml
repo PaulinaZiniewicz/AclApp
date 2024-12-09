@@ -1,0 +1,66 @@
+name: acl_application
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+      sdk: flutter
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.10+1
+  flutter_switch: ^0.3.2
+  calendar_date_picker2: ^1.1.5
+  connectivity_plus: ^6.0.4
+  cupertino_icons: ^1.0.8
+  smooth_page_indicator: ^1.2.0+3
+  firebase_auth: ^5.3.1
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  fl_chart: ^0.69.2
+  awesome_notifications: ^0.10.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/images/logo.png
+    - assets/images/img_nav_sleep.svg
+    - assets/images/img_nav_sleep_primary.svg
+    - assets/images/img_nav_trainings.svg
+    - assets/images/img_nav_trainings_primary.svg
+    - assets/images/img_home.svg
+    - assets/images/img_nav_home_primary.svg
+    - assets/images/img_nav_workouts.svg
+    - assets/images/img_nav_workouts_primary.svg
+    - assets/images/img_nav_profile.svg
+    - assets/images/img_nav_profile_primary.svg
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/InterBold.ttf
+          weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
+        - asset: assets/fonts/PoppinsBold.ttf
+          weight: 700
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PoppinsSemiBold.ttf
+          weight: 600
