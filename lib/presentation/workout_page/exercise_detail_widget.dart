@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import '../../theme/theme_helper.dart';
 import 'workout_plan.dart';
 
 class ExerciseDetailWidget extends StatefulWidget {
@@ -137,7 +138,7 @@ class _ExerciseDetailWidgetState extends State<ExerciseDetailWidget> {
           return Checkbox(
             value: completedSets[index],
             onChanged: (value) => _toggleSetCompletion(index, value),
-            activeColor: const Color(0xFFF55022),
+            activeColor: theme.colorScheme.primary,
           );
         }),
       ),
@@ -152,7 +153,7 @@ class _ExerciseDetailWidgetState extends State<ExerciseDetailWidget> {
         margin: const EdgeInsets.all(18.0),
         padding: const EdgeInsets.all(18.0),
         decoration: BoxDecoration(
-          color: const Color(0xFF3C536C),
+          color: appTheme.blueGray700 ,
           borderRadius: BorderRadius.circular(12.0),
         ),
         child: Column(
@@ -163,7 +164,7 @@ class _ExerciseDetailWidgetState extends State<ExerciseDetailWidget> {
               width: double.infinity,
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                color: const Color(0xFF869FB5),
+                color: appTheme.blueGray300,
                 borderRadius: BorderRadius.circular(8.0),
               ),
               child: Column(
@@ -203,7 +204,7 @@ class _ExerciseDetailWidgetState extends State<ExerciseDetailWidget> {
             // Timer or Repetitions
             _buildTimerOrRepetitions(),
             Text(
-                  "${widget.exercise.purpose}",
+                  widget.exercise.purpose,
                     style: const TextStyle(
                       fontSize: 12,
                       color: Colors.white70,

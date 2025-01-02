@@ -89,8 +89,8 @@ class _NotificationTimePickerState extends State<NotificationTimePicker> {
         content: NotificationContent(
           id: 1,
           channelKey: 'basic_channel',
-          title: 'Reminder',
-          body: 'This is your scheduled notification!',
+          title: "ACL women's prevention",
+          body: 'Stay on track! Update your records regularly to monitor your progress effectively',
           notificationLayout: NotificationLayout.BigPicture,
         ),
         schedule: NotificationCalendar(

@@ -3,6 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fl_chart/fl_chart.dart';
 
+import '../../../theme/theme_helper.dart';
+
 class SleepTrendChart extends StatelessWidget {
   const SleepTrendChart({super.key});
 
@@ -180,18 +182,18 @@ class SleepTrendChart extends StatelessWidget {
                         LineChartBarData(
                           spots: spots,
                           isCurved: true,
-                          color: const Color(0xFFF55022),
+                          color: theme.colorScheme.primary,
                           barWidth: 4,
                           isStrokeCapRound: true,
                           belowBarData: BarAreaData(
                             show: true,
-                            color: const Color(0xFFF55022).withOpacity(0.3),
+                            color: theme.colorScheme.primary.withOpacity(0.3),
                           ),
                           dotData: FlDotData(
                             show: true,
                             getDotPainter: (spot, percent, barData, index) {
                               final value = spot.y;
-                              final isOptimal = value >= 7.5 && value <= 10;
+                              final isOptimal = value >= 8 && value <= 10;
                               return FlDotCirclePainter(
                                 radius: 4,
                                 color: isOptimal ? Colors.green : Colors.red,

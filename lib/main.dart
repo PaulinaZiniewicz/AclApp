@@ -12,7 +12,7 @@ var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
 void main() async {
 await AwesomeNotifications().initialize(
-  // Domyślny obrazek do powiadomień
+
   'resource://drawable/res_app_icon',
   [
     NotificationChannel(
@@ -36,14 +36,12 @@ await AwesomeNotifications().initialize(
 );
 
 
-
   // Prośba o uprawnienia do powiadomień
   bool isAllowed = await AwesomeNotifications().isNotificationAllowed();
   if (!isAllowed) {
     await AwesomeNotifications().requestPermissionToSendNotifications();
   }
 
-  // Ograniczenie orientacji do pionowej
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // Inicjalizacja Firebase
@@ -56,7 +54,7 @@ await AwesomeNotifications().initialize(
     print('Error initializing Firebase: $e');
   }
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

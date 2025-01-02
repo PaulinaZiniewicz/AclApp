@@ -17,10 +17,10 @@ class _TrainingsListPageState extends State<TrainingsListPage> {
     final user = FirebaseAuth.instance.currentUser;
 
     if (user == null) {
-      return const Center(
+      return Center(
         child: Text(
           "User not logged in. Please log in to view your trainings.",
-          style: TextStyle(fontSize: 16, color: Colors.red),
+          style: TextStyle(fontSize: 16, color: theme.colorScheme.primary),
         ),
       );
     }

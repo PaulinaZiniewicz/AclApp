@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class ResetPasswordPage extends StatefulWidget {
   final String email;
 
-  const ResetPasswordPage({Key? key, required this.email}) : super(key: key);
+  const ResetPasswordPage({super.key, required this.email});
 
   @override
   _ResetPasswordPageState createState() => _ResetPasswordPageState();

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'exercise_list.dart';
 import 'info_card.dart';
-import 'exercise_detail_widget.dart';
 import 'workout_plan.dart';
 
 class WorkoutPlanDetailPage extends StatefulWidget {

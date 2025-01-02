@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'exercise_detail_widget.dart';
 import 'workout_plan.dart';
 import 'workout_plan_execution.dart';
 
@@ -59,8 +58,8 @@ class ExerciseListPage extends StatelessWidget {
             ),
           );
         },
-        child: const Icon(Icons.play_arrow),
         tooltip: 'Start Workout',
+        child: const Icon(Icons.play_arrow),
       ),
     );
   }

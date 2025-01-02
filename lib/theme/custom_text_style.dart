@@ -72,6 +72,7 @@ class CustomTextStyles {
   static TextStyle get titleSmallBold =>
       theme.textTheme.titleSmall!.copyWith(
         fontWeight: FontWeight.w700,
+        color: appTheme.gray50,
       );
 
   static TextStyle get titleSmallInter =>

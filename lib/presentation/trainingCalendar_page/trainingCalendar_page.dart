@@ -127,10 +127,10 @@ class _TrainingCalendarPageState extends State<TrainingCalendarPage> {
           calendarType: CalendarDatePicker2Type.single,
           firstDate: DateTime(DateTime.now().year - 5),
           lastDate: DateTime(DateTime.now().year + 5),
-          selectedDayHighlightColor: const Color(0xFFFF5582),
+          selectedDayHighlightColor: theme.colorScheme.primary,
           firstDayOfWeek: 1,
           weekdayLabelTextStyle: TextStyle(
-            color: theme.colorScheme.secondaryContainer,
+            color: appTheme.blueGray700,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.w600,
           ),
@@ -140,7 +140,7 @@ class _TrainingCalendarPageState extends State<TrainingCalendarPage> {
             fontWeight: FontWeight.w600,
           ),
           dayTextStyle: TextStyle(
-            color: theme.colorScheme.secondaryContainer,
+            color: appTheme.blueGray700,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.w600,
           ),

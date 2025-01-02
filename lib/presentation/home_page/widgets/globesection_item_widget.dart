@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../theme/app_decoration.dart';
+import '../../../theme/custom_text_style.dart';
 import '../../../theme/theme_helper.dart';
 import '../../../widgets/custom_image_view.dart';
 
@@ -12,7 +13,7 @@ class GlobeSectionItemWidget extends StatelessWidget {
     super.key,
     required this.iconPath,
     this.analysisText,
-    this.onInfoPressed,
+    this.onInfoPressed, 
   });
 
   @override
@@ -52,10 +53,7 @@ class GlobeSectionItemWidget extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Text(
                   analysisText!,
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 12,
-                  ),
+                  style: CustomTextStyles.bodySmallBlueGray300,
                   overflow: TextOverflow.ellipsis, // Ellipsis for long text
                   maxLines: 10,
                 ),

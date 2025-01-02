@@ -26,3 +26,8 @@ linter:
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+dart_code_metrics:
+  metrics:
+    - lines_of_code
+  rules:
+    - avoid-unused-files

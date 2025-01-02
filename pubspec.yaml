@@ -28,10 +28,12 @@ dependencies:
   awesome_notifications: ^0.10.0
 
 
+  intl: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
+  dart_code_metrics: ^4.19.2
 
 flutter:
   uses-material-design: true

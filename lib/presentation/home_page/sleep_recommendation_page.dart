@@ -11,14 +11,16 @@ class SleepRecommendationsPage extends StatelessWidget {
       "Create a relaxing bedtime routine.",
       "Ensure your bedroom is dark, quiet, and cool.",
       "Avoid caffeine and heavy meals before bedtime.",
-      "Exercise regularly, but not close to bedtime.",
+      
     ];
 
-  return SafeArea(
-    child: Scaffold(
+ return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sleep Recommendations"),
+      ),
       body: Stack(
         children: [
-          // Tło z logo
+          // Background logo
           Align(
             alignment: Alignment.center,
             child: Opacity(
@@ -30,14 +32,9 @@ class SleepRecommendationsPage extends StatelessWidget {
               ),
             ),
           ),
-          // Główna zawartość
+          // Main content
           Column(
             children: [
-              // Nagłówek
-              AppBar(
-                title: const Text("Sleep Recommendations"),
-              ),
-              // Lista rekomendacji
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -57,10 +54,6 @@ class SleepRecommendationsPage extends StatelessWidget {
           ),
         ],
       ),
-    ),
-  );
+    );
   }
 }
-
-
-  

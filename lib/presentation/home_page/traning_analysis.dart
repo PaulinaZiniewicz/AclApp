@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart'; // Do generowania dat
 
 class TrainingAnalysis {
@@ -48,7 +47,7 @@ final snapshot = await FirebaseFirestore.instance
     // Kryteria oceny
     final meetsRecommendations = trainingCounts["Stability"]! >= 2 &&
         trainingCounts["Mobility"]! >= 1 &&
-        trainingCounts["Football"]! <= 4 &&
+        trainingCounts["Football"]! >= 3 &&
         trainingCounts["Gym"]! >= 1 &&
         trainingCounts["Stretching"]! >= 1;
 
@@ -58,7 +57,7 @@ final snapshot = await FirebaseFirestore.instance
     if (meetsRecommendations) {
       return "Great job! Your training routine is balanced and effective. Keep it up!";
     } else if (partiallyMeetsRecommendations) {
-      return "You\'re doing well, but there\'s room for improvement. Focus on balancing all training aspects.";
+      return "You're doing well, but there's room for improvement. Focus on balancing all training aspects.";
     } else {
       return "Try to follow the training recommendations to optimize your performance.";
     }

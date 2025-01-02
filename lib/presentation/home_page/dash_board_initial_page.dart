@@ -2,17 +2,14 @@ import 'package:acl_application/core/utils/size_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../core/utils/image_constant.dart';
-import '../../theme/theme_helper.dart';
 import '../../widgets/app_bar/appbar_title.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
-import '../profile_page/profile_page.dart';
 import 'profile_analysis.dart';
 import 'profile_recommendations.dart';
 import 'sleep_analysis.dart';
 import 'sleep_recommendation_page.dart';
 import 'training_recommendations_page.dart';
 import 'traning_analysis.dart';
-import 'widgets/dailygoalsection_item_widget.dart';
 import 'widgets/globesection_item_widget.dart';
 
 class DashBoardInitialPage extends StatefulWidget {
@@ -94,16 +91,6 @@ class DashBoardInitialPageState extends State<DashBoardInitialPage> {
                     SizedBox(height: 16.h),
                     _buildGlobeSection(context, user),
                     SizedBox(height: 16.h),
-                    //Padding(
-                      //padding: EdgeInsets.only(left: 8.h),
-                      //child: Text(
-                       // "Daily Goal",
-                       // style: theme.textTheme.titleMedium,
-                     // ),
-                    //),
-                    SizedBox(height: 16.h),
-                    //_buildDailyGoalSection(context),
-                    //SizedBox(height: 44.h),
                   ],
                 ),
               ),
@@ -132,10 +119,10 @@ class DashBoardInitialPageState extends State<DashBoardInitialPage> {
           shrinkWrap: true, // Ensures the grid adjusts to content
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200, // Adjust max width per grid item
+            maxCrossAxisExtent: 200, 
             crossAxisSpacing: 16,
             mainAxisSpacing: 16,
-            childAspectRatio: 0.8, // Allow taller widgets
+            childAspectRatio: 0.8, 
           ),
           itemCount: 4,
           itemBuilder: (context, index) {
@@ -169,7 +156,7 @@ class DashBoardInitialPageState extends State<DashBoardInitialPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SleepRecommendationsPage(),
+                        builder: (context) => const SleepRecommendationsPage(),
                       ),
                     );
                   },
@@ -195,24 +182,6 @@ class DashBoardInitialPageState extends State<DashBoardInitialPage> {
             }
           },
         ),
-      ),
-    );
-  }
-
-  Widget _buildDailyGoalSection(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 8.h, right: 12.h),
-      child: ListView.separated(
-        padding: EdgeInsets.zero,
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        separatorBuilder: (context, index) {
-          return SizedBox(height: 14.h);
-        },
-        itemCount: 1,
-        itemBuilder: (context, index) {
-          return const DailyGoalSectionItemWidget();
-        },
       ),
     );
   }
